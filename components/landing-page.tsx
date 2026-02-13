@@ -85,63 +85,6 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
               </Button>
             </div>
           </div>
-
-          {/* Dashboard Preview */}
-          <div className="mt-16 border border-neutral-800 rounded-lg bg-neutral-900/50 p-1">
-            <div className="border border-neutral-800 rounded bg-neutral-900 p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 rounded-full bg-red-500/60" />
-                <div className="w-3 h-3 rounded-full bg-orange-500/60" />
-                <div className="w-3 h-3 rounded-full bg-neutral-600" />
-                <span className="text-xs text-neutral-500 ml-3 font-mono">dq-engine / dashboard</span>
-              </div>
-              <div className="grid grid-cols-4 gap-3">
-                {[
-                  { label: "RECORDS SCANNED", value: "2,400", color: "text-white" },
-                  { label: "VIOLATIONS", value: "187", color: "text-orange-500" },
-                  { label: "ACTIVE RULES", value: "8/8", color: "text-white" },
-                  { label: "BATCH RUNS", value: "5", color: "text-white" },
-                ].map((stat) => (
-                  <div key={stat.label} className="bg-neutral-800 border border-neutral-700 rounded p-3">
-                    <p className="text-[10px] text-neutral-500 tracking-wider">{stat.label}</p>
-                    <p className={`text-xl font-bold font-mono mt-1 ${stat.color}`}>{stat.value}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-3 grid grid-cols-3 gap-3">
-                <div className="col-span-2 bg-neutral-800 border border-neutral-700 rounded p-3 h-24 flex items-end gap-1">
-                  {[60, 35, 80, 45, 70, 25, 90, 55].map((h, i) => (
-                    <div key={i} className="flex-1 flex flex-col justify-end gap-0.5">
-                      <div className="bg-orange-500/80 rounded-t" style={{ height: `${h * 0.6}%` }} />
-                      <div className="bg-neutral-600 rounded-b" style={{ height: `${(100 - h) * 0.6}%` }} />
-                    </div>
-                  ))}
-                </div>
-                <div className="bg-neutral-800 border border-neutral-700 rounded p-3 h-24">
-                  <div className="w-16 h-16 mx-auto mt-1 rounded-full border-4 border-orange-500 border-t-neutral-700 border-r-neutral-700" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Bar */}
-      <section id="stats" className="border-y border-neutral-800 bg-neutral-900/50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-neutral-800">
-            {[
-              { value: "8+", label: "Rule Types Supported" },
-              { value: "4", label: "Execution Groups" },
-              { value: "99.9%", label: "Uptime SLA" },
-              { value: "<3s", label: "Batch Trigger Time" },
-            ].map((s) => (
-              <div key={s.label} className="py-8 px-6 text-center">
-                <p className="text-2xl md:text-3xl font-bold text-white font-mono">{s.value}</p>
-                <p className="text-xs text-neutral-500 mt-1 tracking-wider">{s.label}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -212,7 +155,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
               How It Works
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8"> 
             {[
               { step: "01", title: "Define Rules", desc: "Create SQL-based quality rules with severity, groups, and dependencies." },
               { step: "02", title: "Map Sites", desc: "Associate rules with target sites and configure execution parameters." },
@@ -229,29 +172,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 border-t border-neutral-800">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-balance">
-            Ready to take control of your data quality?
-          </h2>
-          <p className="mt-4 text-neutral-400">
-            Get started in seconds. No credit card required.
-          </p>
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <Button
-              className="bg-orange-500 text-white hover:bg-orange-600 px-8 py-6 text-base"
-              onClick={() => onNavigate("signup")}
-            >
-              Create Account
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
-          </div>
-          <p className="mt-4 text-xs text-neutral-600 font-mono">
-            Default credentials: admin / admin123
-          </p>
-        </div>
-      </section>
+
 
       {/* Footer */}
       <footer className="border-t border-neutral-800 py-8">

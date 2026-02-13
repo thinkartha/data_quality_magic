@@ -137,11 +137,6 @@ export default function LoginPage({ onNavigate, onLoginSuccess }: LoginPageProps
                 </p>
               </div>
 
-              <div className="mt-4 p-3 bg-neutral-800/50 border border-neutral-700 rounded">
-                <p className="text-[10px] text-neutral-500 tracking-wider mb-1">DEFAULT CREDENTIALS</p>
-                <p className="text-xs text-neutral-300 font-mono">admin / admin123</p>
-                <p className="text-xs text-neutral-300 font-mono">analyst / analyst123</p>
-              </div>
             </CardContent>
           </Card>
         </div>
