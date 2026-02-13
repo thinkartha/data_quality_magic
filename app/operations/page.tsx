@@ -525,6 +525,9 @@ export default function BatchControlPage() {
                   <SelectItem value="TALEND" className="text-neutral-200">
                     Talend
                   </SelectItem>
+                  <SelectItem value="DATADRICKS" className="text-neutral-200">
+                    Databricks
+                  </SelectItem>
                 </SelectContent>
               </Select>
             </div>

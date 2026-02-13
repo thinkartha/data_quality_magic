@@ -8,7 +8,6 @@ const geistMono = GeistMono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "DQ Engine - Data Quality Rules Dashboard",
   description: "ETL Data Quality Rules Engine - Define, apply, and analyze data quality rules across any data table",
-  generator: 'v0.app'
 }
 
 export default function RootLayout({

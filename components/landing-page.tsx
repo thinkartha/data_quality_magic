@@ -31,7 +31,6 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
           <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-400">
             <a href="#features" className="hover:text-white transition-colors">Features</a>
             <a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a>
-            <a href="#stats" className="hover:text-white transition-colors">Stats</a>
           </nav>
           <div className="flex items-center gap-3">
             <Button
